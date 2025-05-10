@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en" x-data="{ mobileMenuOpen: false }">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>M2 Editing Studio</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      scroll-behavior: smooth;
+      font-family: 'Helvetica Neue', sans-serif;
+    }
+  </style>
+</head>
+<body class="bg-black text-white">
+
+<!-- Navbar -->
+<nav class="fixed top-0 left-0 w-full z-50 bg-black bg-opacity-80 backdrop-blur-sm shadow-md">
+  <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
+    <div class="flex items-center space-x-3">
+      <img src="assets/logo2.png" alt="M2 Editing Logo" class="h-14 w-10">
+      <span class="text-yellow-400 font-bold text-lg">M2 EDITING</span>
+    </div>
+    <div class="space-x-6 hidden md:flex">
+      <a href="index.html" class="text-white hover:text-yellow-400">Home</a>
+      <a href="index.html#about" class="text-white hover:text-yellow-400">About</a>
+      <a href="index.html#services" class="text-white hover:text-yellow-400">Services</a>
+      <a href="index.html#contact" class="text-white hover:text-yellow-400">Contact</a>
+      <a href="index.html#join" class="bg-yellow-400 text-black font-semibold px-4 py-2 rounded hover:bg-yellow-500 transition">Join Us</a>
+    </div>
+    <button class="md:hidden text-yellow-400 focus:outline-none" @click="mobileMenuOpen = !mobileMenuOpen">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+      </svg>
+    </button>
+  </div>
+  <div x-show="mobileMenuOpen" class="md:hidden bg-black px-4 pb-4 space-y-2">
+    <a href="index.html" class="block text-white hover:text-yellow-400">Home</a>
+    <a href="index.html#about" class="block text-white hover:text-yellow-400">About</a>
+    <a href="index.html#services" class="block text-white hover:text-yellow-400">Services</a>
+    <a href="index.html#contact" class="block text-white hover:text-yellow-400">Contact</a>
+    <a href="index.html#join" class="block bg-yellow-400 text-black font-semibold px-4 py-2 rounded hover:bg-yellow-500 transition">Join Us</a>
+  </div>
+</nav>
+<!-- Navbar End -->
+
+<!-- Hero Section with Video -->
+<section id="home" class="relative w-full h-screen overflow-hidden">
+  <video autoplay muted loop playsinline class="absolute top-0 left-0 w-full h-full object-cover z-0">
+    <source src="assets/bg.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+  <div class="absolute inset-0 bg-black bg-opacity-60 z-10"></div>
+
+  <div class="relative z-20 flex flex-col justify-center items-center h-full px-6 text-center">
+    <h2 class="text-4xl font-bold text-yellow-400 mb-12" data-aos="fade-up">Our Work & Services</h2>
+
+   <!-- Services Grid -->
+<div class="grid gap-8 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 max-w-6xl mx-auto" data-aos="fade-up" data-aos-delay="200">
+
+    <!-- Service 1 -->
+    <div class="bg-gray-900 rounded-xl shadow-md hover:shadow-lg transition-transform transform hover:scale-105 w-64 p-6 text-center">
+      <img src="edit1.jpg" alt="Reels Editing" class="w-12 h-12 mx-auto mb-4 object-contain" />
+      <h3 class="text-lg font-semibold text-yellow-300 mb-2">Reels Editing</h3>
+      <p class="text-sm text-gray-400">High-energy, synchronized montages perfect for gaming content, highlights, and reels.</p>
+    </div>
+  
+    <!-- Service 2 -->
+    <div class="bg-gray-900 rounded-xl shadow-md hover:shadow-lg transition-transform transform hover:scale-105 w-64 p-6 text-center">
+      <img src="edit1.jpg" alt="Thumbnail Editing" class="w-12 h-12 mx-auto mb-4 object-contain" />
+      <h3 class="text-lg font-semibold text-yellow-300 mb-2">Thumbnail Editing</h3>
+      <p class="text-sm text-gray-400">Smooth edits with transitions and storytelling tailored for lifestyle or travel vlogs.</p>
+    </div>
+  
+    <!-- Service 3 -->
+    <div class="bg-gray-900 rounded-xl shadow-md hover:shadow-lg transition-transform transform hover:scale-105 w-64 p-6 text-center">
+      <img src="edit1.jpg" alt="Cinematic Trailers" class="w-12 h-12 mx-auto mb-4 object-contain" />
+      <h3 class="text-lg font-semibold text-yellow-300 mb-2">Wedding Flim Editing</h3>
+      <p class="text-sm text-gray-400">Film-style color grading and dramatic slow-mo for trailers or cinematic sequences.</p>
+    </div>
+  
+    <!-- Service 4 -->
+    <div class="bg-gray-900 rounded-xl shadow-md hover:shadow-lg transition-transform transform hover:scale-105 w-64 p-6 text-center">
+      <img src="edit1.jpg" alt="Reel Cuts" class="w-12 h-12 mx-auto mb-4 object-contain" />
+      <h3 class="text-lg font-semibold text-yellow-300 mb-2">Gaming Editing</h3>
+      <p class="text-sm text-gray-400">Short-form content editing optimized for Instagram Reels, YouTube Shorts, and TikTok.</p>
+    </div>
+  
+    <!-- Service 5 -->
+    <div class="bg-gray-900 rounded-xl shadow-md hover:shadow-lg transition-transform transform hover:scale-105 w-64 p-6 text-center">
+      <img src="edit1.jpg" alt="Montage Editing" class="w-12 h-12 mx-auto mb-4 object-contain" />
+      <h3 class="text-lg font-semibold text-yellow-300 mb-2">Montage Editing</h3>
+      <p class="text-sm text-gray-400">High-energy, synchronized montages perfect for gaming content, highlights, and reels.</p>
+    </div>
+  
+    <!-- Service 6 -->
+    <div class="bg-gray-900 rounded-xl shadow-md hover:shadow-lg transition-transform transform hover:scale-105 w-64 p-6 text-center">
+      <img src="edit1.jpg" alt="Vlog Editing" class="w-12 h-12 mx-auto mb-4 object-contain" />
+      <h3 class="text-lg font-semibold text-yellow-300 mb-2">Vlog Editing</h3>
+      <p class="text-sm text-gray-400">Smooth edits with transitions and storytelling tailored for lifestyle or travel vlogs.</p>
+    </div>
+  
+    <!-- Service 7 -->
+    <div class="bg-gray-900 rounded-xl shadow-md hover:shadow-lg transition-transform transform hover:scale-105 w-64 p-6 text-center">
+      <img src="edit1.jpg" alt="Cinematic Trailers" class="w-12 h-12 mx-auto mb-4 object-contain" />
+      <h3 class="text-lg font-semibold text-yellow-300 mb-2">Cinematic Trailers</h3>
+      <p class="text-sm text-gray-400">Film-style color grading and dramatic slow-mo for trailers or cinematic sequences.</p>
+    </div>
+  
+    <!-- Service 8 -->
+    <div class="bg-gray-900 rounded-xl shadow-md hover:shadow-lg transition-transform transform hover:scale-105 w-64 p-6 text-center">
+      <img src="edit1.jpg" alt="Reel Cuts" class="w-12 h-12 mx-auto mb-4 object-contain" />
+      <h3 class="text-lg font-semibold text-yellow-300 mb-2">Reel Cuts</h3>
+      <p class="text-sm text-gray-400">Short-form content editing optimized for Instagram Reels, YouTube Shorts, and TikTok.</p>
+    </div>
+  
+  </div>  
+
+    <!-- Explore More Button -->
+    <div class="mt-12" data-aos="fade-up" data-aos-delay="300">
+        <a href="https://wa.me/918122426212?text=Hi%2C%20I'm%20interested%20in%20booking%20a%20service."
+        class="inline-block bg-yellow-400 hover:bg-yellow-500 text-black font-semibold py-3 px-8 rounded-full transition duration-300 text-lg">
+       Book Now
+      </a>
+    </div>
+  </div>
+</section>
+
+<hr style="border: none; height: 2px; background-color: #1a1a1a; margin: 60px auto; width: 100%;">
+
+<!-- Footer -->
+<footer class="bg-black text-gray-400 py-10">
+  <div class="max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
+    <div>
+      <h4 class="text-yellow-400 text-lg font-semibold mb-2">M2 Editing Studio</h4>
+      <p class="text-sm">A creative hub where your videos come to life.</p>
+    </div>
+    <div>
+      <h4 class="text-yellow-400 text-lg font-semibold mb-2">Quick Links</h4>
+      <ul class="space-y-1">
+        <li><a href="#about" class="hover:text-white">About</a></li>
+        <li><a href="#services" class="hover:text-white">Services</a></li>
+        <li><a href="#contact" class="hover:text-white">Contact</a></li>
+        <li><a href="#join" class="hover:text-white">Join Us</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4 class="text-yellow-400 text-lg font-semibold mb-2">Follow Us</h4>
+      <ul class="space-y-1">
+        <li><a href="mailto:m2studio.co@gmail.com" class="hover:text-white">📧 Email</a></li>
+        <li><a href="https://www.instagram.com/_m2_studio._" class="hover:text-white" target="_blank">📷 Instagram</a></li>
+        <li><a href="https://discord.gg/uMvSpP3s7M" class="hover:text-white" target="_blank">💬 Discord</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="mt-8 text-center text-xs text-gray-600">
+    <hr style="border: none; height: 2px; background-color: #1a1a1a; margin: 60px auto; width: 20%;">
+    &copy; 2025 M2 Editing Studio. All rights reserved.
+  </div>
+</footer>
+
+<!-- AOS Init -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
+</body>
+</html>
